@@ -3,7 +3,7 @@
 Drop-in persistent object cache for WordPress based on Redis in-memory storage that supports Predis, clusters, and WP-CLI (forked from PressJitsu).
 
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/object-cache)
-* [Download Latest Version (ZIP)](https://github.com/littlebizzy/object-cache/archive/1.0.1.zip)
+* [Download Latest Version (ZIP)](https://github.com/littlebizzy/object-cache/archive/1.1.0.zip)
 * [**Become A LittleBizzy.com Member Today!**](https://www.littlebizzy.com/members)
 
 ### Defined Constants
