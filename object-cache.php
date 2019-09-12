@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 Plugin Name: Object Cache
 Plugin URI: https://www.littlebizzy.com/plugins/object-cache
 Description: Drop-in persistent object cache for WordPress based on Redis in-memory storage that supports Predis, clusters, and WP-CLI (forked from PressJitsu).
