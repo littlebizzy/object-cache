@@ -15,10 +15,10 @@ WC tested up to: 3.5
 Prefix: OBJCHE
 */
 
-// Check if Redis class is installed
-if ( ! class_exists( 'Redis' ) ) {
-	return;
-}
+$littlebizzy_objche_allowed = defined( 'OBJECT_CACHE' ) ? OBJECT_CACHE : true;
+
+// check if allowed and installed class Redis
+if( $littlebizzy_objche_allowed && class_exists( 'Redis' ) ) :
 
 /**
  * Adds a value to cache.
@@ -798,3 +798,5 @@ class WP_Object_Cache {
 		$this->no_redis_groups = array_unique( array_merge( $this->no_redis_groups, $groups ) );
 	}
 }
+
+endif; // endif - check if allowed and installed class Redis
