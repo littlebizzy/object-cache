@@ -19,13 +19,15 @@ WC tested up to: 3.5
 Prefix: OBJCHE
 */
 
+declare(strict_types=1);
+
 // if OBJECT_CACHE is enabled in wp-config.php (e.g. constant is 'true' or not defined) and 'Redis' class exists
-if( OBJECT_CACHE != false && class_exists( 'Redis' ) ) :
+if( ( defined( 'OBJECT_CACHE' ) && OBJECT_CACHE ) && class_exists( 'Redis' ) ) :
 
 /**
  * Adds a value to cache.
  *
- * If the specified key already exists, the value is not stored and the function
+ * If the specified key wp_cache_addalready exists, the value is not stored and the function
  * returns false.
  *
  * @param string $key        The key under which to store the value.
@@ -282,7 +284,25 @@ class WP_Object_Cache {
 	 *
 	 * @var array
 	 */
-	public $global_groups = array( 'users', 'userlogins', 'usermeta', 'site-options', 'site-lookup', 'blog-lookup', 'blog-details', 'rss' );
+	public $global_groups = array(
+        'blog-details',
+        'blog-id-cache',
+        'blog-lookup',
+        'global-posts',
+        'networks',
+        'rss',
+        'sites',
+        'site-details',
+        'site-lookup',
+        'site-options',
+        'site-transient',
+        'users',
+        'useremail',
+        'userlogins',
+        'usermeta',
+        'user_meta',
+        'userslugs',
+    );
 
 	private $_global_groups;
 
@@ -359,7 +379,7 @@ class WP_Object_Cache {
 			}
 			$this->redis = $redis_instance;
 			$this->redis->connect( $redis['host'], $redis['port'] );
-			$this->redis->setOption( Redis::OPT_SERIALIZER, Redis::SERIALIZER_NONE );
+			$this->redis->setOption( Redis::OPT_SERIALIZER, (string) Redis::SERIALIZER_PHP );
 
 			if ( isset( $redis['auth'] ) ) {
 				$this->redis->auth( $redis['auth'] );
@@ -689,7 +709,7 @@ class WP_Object_Cache {
 		if ( in_array( $group, $this->no_redis_groups ) || ! $this->can_redis() ) {
 			return true;
 		}
-		
+
 		$value = is_numeric( $value ) ? $value : serialize( $value );
 
 		// Save to Redis
