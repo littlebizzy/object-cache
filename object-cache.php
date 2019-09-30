@@ -21,8 +21,13 @@ Prefix: OBJCHE
 
 declare(strict_types=1);
 
-// if OBJECT_CACHE is enabled in wp-config.php (e.g. constant is 'true' or not defined) and 'Redis' class exists
-if( ( defined( 'OBJECT_CACHE' ) && OBJECT_CACHE ) && class_exists( 'Redis' ) ) :
+// check if OBJECT_CACHE is disabled in wp-config.php
+if ( defined( 'OBJECT_CACHE' ) && !OBJECT_CACHE ) {
+	return;
+}
+
+// check if 'Redis' class exists
+if( class_exists( 'Redis' ) ) :
 
 /**
  * Adds a value to cache.
