@@ -1,0 +1,14 @@
+== Changelog ==
+
+= 1.2.0 =
+* tested with PHP 7.0, 7.1, 7.2
+* not tested on PHP 5.x and earlier versions
+* added support for PHP strict_types
+* minor code tweaks
+
+= 1.1.0 =
+* added supported for OBJECT_CACHE defined constant (rudimentary)
+* recommended not to use this version
+
+= 1.0.0 =
+* duplicated from PressJitsu Redis Object Cache
