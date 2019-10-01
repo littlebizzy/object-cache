@@ -3,13 +3,13 @@
 Drop-in persistent object cache for WordPress based on Redis in-memory storage that supports Predis, clusters, and WP-CLI (forked from PressJitsu).
 
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/object-cache)
-* [Download Latest Version (ZIP)](https://github.com/littlebizzy/object-cache/archive/1.1.0.zip)
+* [Download Latest Version (ZIP)](https://github.com/littlebizzy/object-cache/archive/1.2.0.zip)
 * [**Become A LittleBizzy.com Member Today!**](https://www.littlebizzy.com/members)
 
 ### Defined Constants
 
     /** Object Cache Functions */
-    define('OBJECT_CACHE', true); // default = true
+    define('OBJECT_CACHE', true); // default = true (if not defined, object-cache.php loaded by default)
     
 ### Included Modules
 
@@ -17,7 +17,7 @@ Drop-in persistent object cache for WordPress based on Redis in-memory storage t
 
 ### Compatibility
 
-This plugin has been designed for use on [SlickStack](https://slickstack.io) web servers with PHP 7.2 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only — for both performance and usability reasons, we strongly recommend avoiding WordPress Multisite for the vast majority of your projects.
+This plugin has been designed for use on [SlickStack](https://slickstack.io) web servers with PHP 7.2 and MySQL 5.7 to achieve best performance. All of our plugins are meant more for single site WordPress installations — for both performance and usability reasons, we strongly recommend avoiding WordPress Multisite for the vast majority of your projects.
 
 Any of our WordPress plugins may also be loaded as "Must-Use" plugins (meaning that they load first, and cannot be deactivated) by using our free [Autoloader](https://github.com/littlebizzy/autoloader) script in the `mu-plugins` directory.
 
