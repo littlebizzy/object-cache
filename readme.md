@@ -9,7 +9,7 @@ Drop-in persistent object cache for WordPress based on Redis in-memory storage t
 ### Defined Constants
 
     /** Object Cache Functions */
-    define('OBJECT_CACHE', true); // default = true (if not defined, object-cache.php loaded by default)
+    define('OBJECT_CACHE', true); // default = true (if not defined, object-cache.php loads by default)
     
 ### Included Modules
 
