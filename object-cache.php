@@ -3,19 +3,18 @@
 Plugin Name: Object Cache
 Plugin URI: https://www.littlebizzy.com/plugins/object-cache
 Description: Drop-in persistent object cache for WordPress based on Redis in-memory storage that supports Predis, clusters, and WP-CLI (forked from PressJitsu).
-Version: 1.1.0
+Version: 1.2.0
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Upstream Plugin Name: Pressjitsu Redis Object Cache
 Upstream Plugin URI: https://github.com/pressjitsu/pj-object-cache-red
-Upstream Author: Eric Mann + Erick Hitter
+Upstream Author: Eric Mann + Erick Hitter + Pressjitsu, Inc.
 Upstream Author URI: https://pressjitsu.com
-Upstream Copyright: Pressjitsu, Inc.
 PBP Version: N/A
 WC requires at least: 3.3
-WC tested up to: 3.5
+WC tested up to: 3.7
 Prefix: OBJCHE
 */
 
@@ -826,4 +825,4 @@ class WP_Object_Cache {
 	}
 }
 
-endif; // if OBJECT_CACHE enabled and 'Redis' class exists
+endif; // if 'Redis' class exists
