@@ -2,7 +2,7 @@
 
 ### 1.2.1
 * improved `composer.json`
-* updated meta data
+* updated metadata
 
 ### 1.2.0
 * tested with PHP 7.0, 7.1, 7.2
