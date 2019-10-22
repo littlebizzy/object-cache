@@ -11,7 +11,7 @@
 * minor code tweaks
 
 ### 1.1.0
-* added supported for `OBJECT_CACHE` defined constant (rudimentary)
+* added support for `OBJECT_CACHE` defined constant (rudimentary)
 * recommended not to use this version
 
 ### 1.0.0
