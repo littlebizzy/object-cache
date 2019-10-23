@@ -15,10 +15,6 @@ Drop-in persistent object cache for WordPress based on Redis in-memory storage t
 
 * (n/a)
 
-### Included Modules
-
-* (n/a)
-
 ### Compatibility
 
 This plugin has been designed for use on [SlickStack](https://slickstack.io) web servers with PHP 7.2 and MySQL 5.7 to achieve best performance. All of our plugins are meant primarily for single site WordPress installations — for both performance and usability reasons, we strongly recommend avoiding WordPress Multisite for the vast majority of your projects.
