@@ -4,5 +4,8 @@
 	},
 	"1.2.1": {
 		"package": "https://github.com/littlebizzy/object-cache/archive/v1.2.1.zip"
+	},
+	"1.2.2": {
+		"package": "https://github.com/littlebizzy/object-cache/archive/v1.2.2.zip"
 	}
 }
