@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.2.2
+* improved support for Query Monitor plugin (etc)
+* replaced deprecated class function
+
 ### 1.2.1
 * improved `composer.json`
 * updated metadata
