@@ -553,7 +553,7 @@ class WP_Object_Cache {
 		unset( $this->to_preload[ $group ][ $key ] );
 		unset( $this->to_unserialize[ $redis_key ] );
 
-		return (bool) $this->redis->delete( $redis_key );
+		return (bool) $this->redis->del( $redis_key );
 	}
 
 	/**
@@ -596,10 +596,13 @@ class WP_Object_Cache {
 				$this->cache[ $group ][ $key ] = $value;
 			}
 
+			$this->cache_hits += 1;
+
 			return is_object( $value ) ? clone $value : $value;
 		}
 
 		if ( in_array( $group, $this->no_redis_groups ) || ! $this->can_redis() ) {
+			$this->cache_misses += 1;
 			return false;
 		}
 
@@ -608,11 +611,13 @@ class WP_Object_Cache {
 
 		if ( ! is_string( $value ) ) {
 			$this->cache[ $group ][ $key ] = false;
+			$this->cache_misses += 1;
 			return false;
 		}
 
 		$value = is_numeric( $value ) ? $value : unserialize( $value );
 		$this->cache[ $group ][ $key ] = $value;
+		$this->cache_hits += 1;
 		return $value;
 	}
 
