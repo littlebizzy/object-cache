@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.2.3
+* HOTFIX: `PHP Fatal error: Uncaught TypeError: unserialize() expects parameter 1 to be string, object given in /var/www/html/wp-content/object-cache.php:595`
+
 ### 1.2.2
 * improved support for Query Monitor plugin (etc)
 * replaced deprecated class function
